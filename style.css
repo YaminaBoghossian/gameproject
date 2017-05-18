@@ -1,0 +1,334 @@
+@font-face {
+    font-family: 'WhiteRabbit';
+    src: url('WhiteRabbit.eot?#iefix') format('embedded-opentype'), url('WhiteRabbit.woff') format('woff'), url('WhiteRabbit.ttf') format('truetype'), url('WhiteRabbit.svg#WhiteRabbit') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* BODY */
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Disposition du background */
+
+#back {
+    background-image: url(images/bkgrnd.jpg);
+    height: 600px;
+    width: 1066px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: auto;
+}
+
+
+/*------------------ Section Herman------------------------  */
+
+.hermandiv {
+    height: 600px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* ------------- herman character ---------------- */
+
+.herman {
+    height: 180px;
+    width: 180px;
+    margin-left: 50px;
+    margin-top: 420px;
+    opacity: 1;
+}
+
+
+/*section points herman*/
+
+.hermanpoints {
+    border: 5px solid black;
+    height: 600px;
+    width: 150px;
+    opacity: 0.6;
+    background-color: rgba(255, 105, 180, 0.6);
+    text-align: center;
+}
+
+.hermanpoints h1 {
+    font-family: 'WhiteRabbit';
+    font-size: 2.5em;
+    color: rgba(0, 0, 0, 1);
+}
+
+.hermanpoints p {
+    font-family: 'WhiteRabbit';
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 1);
+}
+
+.etoilesherman {
+    display: flex;
+    flex-direction: column;
+}
+
+.etoilesherman i {
+    color: rgba(255, 255, 0, 1);
+    font-size: 2em;
+}
+
+
+/*-------------------Section Roger------------------- */
+
+.rogerdiv {
+    height: 600px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+/* ---------Roger character -------- */
+
+.roger {
+    height: 220px;
+    width: 220px;
+    opacity: 1;
+    margin-top: 380px;
+}
+
+
+/*Section points Roger */
+
+.rogerpoints {
+    border: 5px solid black;
+    height: 600px;
+    width: 150px;
+    background-color: rgba(144, 238, 144, 0.6);
+    text-align: center;
+}
+
+.rogerpoints h1 {
+    font-family: 'WhiteRabbit';
+    text-decoration: blink;
+    font-size: 2.5em;
+    color: rgba(0, 0, 0, 1);
+}
+
+.rogerpoints p {
+    font-family: 'WhiteRabbit';
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 1);
+}
+
+.etoilesroger {
+    display: flex;
+    flex-direction: column;
+}
+
+.etoilesroger i {
+    color: rgba(255, 255, 0, 1);
+    font-size: 2em;
+}
+
+
+/*-------------------------barre de boutons--------------------------- */
+
+.buttonbar {
+    width: 1058px;
+    height: 70px;
+    display: flex;
+    margin: auto;
+    border: 3px solid black;
+    opacity: 0.8;
+    flex-direction: row;
+}
+
+
+/* ----------section de bouton HERMAN--------- */
+
+.buttonherman {
+    width: 50%;
+    height: 70px;
+    background-color: plum;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*bouton herman 1*/
+
+.buttonherman1 {
+    width: 100px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: red;
+    box-shadow: 4px 4px 4px 4px grey;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonherman1:hover {
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+.buttonherman1 p {
+    color: white;
+    font-size: 20px;
+    z-index: 100;
+    font-family: 'WhiteRabbit';
+}
+
+
+/*bouton herman 2*/
+
+.buttonherman2 {
+    width: 100px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: green;
+    box-shadow: 4px 4px 4px 4px grey;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonherman2:hover {
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+.buttonherman2 p {
+    color: white;
+    font-size: 20px;
+    z-index: 100;
+    font-family: 'WhiteRabbit';
+}
+
+
+/*bouton herman 3*/
+
+.buttonherman3 {
+    width: 100px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: plum;
+    box-shadow: 4px 4px 4px 4px grey;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonherman3:hover {
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+.buttonherman3 p {
+    color: white;
+    font-size: 20px;
+    z-index: 100;
+    font-family: 'WhiteRabbit';
+}
+
+
+/* -------- Section bouton Roger --------*/
+
+.buttonroger {
+    width: 50%;
+    height: 70px;
+    background-color: lightgreen;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*bouton roger 1*/
+
+.buttonroger1 {
+    width: 100px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: red;
+    box-shadow: 4px 4px 4px 4px grey;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonroger1:hover {
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+.buttonroger1 p {
+    color: white;
+    font-size: 20px;
+    z-index: 100;
+    font-family: 'WhiteRabbit';
+}
+
+
+/* bouton roger 2 */
+
+.buttonroger2 {
+    width: 100px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: green;
+    box-shadow: 4px 4px 4px 4px grey;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonroger2:hover {
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+.buttonroger2 p {
+    color: white;
+    font-size: 20px;
+    z-index: 100;
+    font-family: 'WhiteRabbit';
+}
+
+
+/*bouton roger 3*/
+
+.buttonroger3 {
+    width: 100px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: plum;
+    box-shadow: 4px 4px 4px 4px grey;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonroger3:hover {
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+.buttonroger3 p {
+    color: white;
+    font-size: 20px;
+    z-index: 100;
+    font-family: 'WhiteRabbit';
+}
