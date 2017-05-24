@@ -20,7 +20,7 @@ body {
 /* Disposition du background */
 
 #back {
-    background-image: url(images/bkgrnd.jpg);
+    background-image: url(images/backgroundnewbi.gif);
     height: 600px;
     width: 1066px;
     display: flex;
@@ -49,6 +49,33 @@ body {
     margin-left: 50px;
     margin-top: 420px;
     opacity: 1;
+    position: relative;
+    animation-name: pushherm;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes pushherm {
+    0% {
+        left: 0px;
+    }
+    50% {
+        left: 300px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+
+/*explosion herman */
+
+.explosionherm {
+    position: absolute;
+    top: 380px;
+    left: 450px;
+    height: 300px;
+    width: 300px;
 }
 
 
@@ -59,7 +86,7 @@ body {
     height: 600px;
     width: 150px;
     opacity: 0.6;
-    background-color: rgba(255, 105, 180, 0.6);
+    background-color: rgba(255, 105, 180, 0.4);
     text-align: center;
 }
 
@@ -77,12 +104,18 @@ body {
 
 .etoilesherman {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .etoilesherman i {
     color: rgba(255, 255, 0, 1);
-    font-size: 2em;
+    font-size: 1em;
+}
+
+.etoilesherman i:hover {
+    color: rgba(255, 255, 0, 1);
+    font-size: 1em;
 }
 
 
@@ -104,6 +137,29 @@ body {
     width: 220px;
     opacity: 1;
     margin-top: 380px;
+    position: relative;
+    animation-name: pushro;
+}
+
+@keyframes pushro {
+    0% {
+        right: 0px;
+    }
+    50% {
+        right: 300px;
+    }
+    100% {
+        right: 0px;
+    }
+}
+
+
+/*explosion roger */
+
+.explosionro {
+    position: absolute;
+    top: 350px;
+    right: 800px
 }
 
 
@@ -119,7 +175,6 @@ body {
 
 .rogerpoints h1 {
     font-family: 'WhiteRabbit';
-    text-decoration: blink;
     font-size: 2.5em;
     color: rgba(0, 0, 0, 1);
 }
@@ -137,7 +192,7 @@ body {
 
 .etoilesroger i {
     color: rgba(255, 255, 0, 1);
-    font-size: 2em;
+    font-size: 1em;
 }
 
 
@@ -169,19 +224,39 @@ body {
 /*bouton herman 1*/
 
 .buttonherman1 {
-    width: 100px;
-    height: 50px;
-    border-radius: 100%;
-    background-color: red;
+    width: 80px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
     box-shadow: 4px 4px 4px 4px grey;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.buttonherman1:hover {
-    box-shadow: 3px 3px 3px 3px black;
+.buttonherman1::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+
+.buttonherman1:hover::after,
+button:focus::after {
+    animation: sheen 1s forwards;
+}
+
+@keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(1em, -9em);
+    }
 }
 
 .buttonherman1 p {
@@ -195,19 +270,39 @@ body {
 /*bouton herman 2*/
 
 .buttonherman2 {
-    width: 100px;
-    height: 50px;
+    width: 80px;
+    height: 40px;
     border-radius: 100%;
-    background-color: green;
+    background-color: lightseagreen;
     box-shadow: 4px 4px 4px 4px grey;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.buttonherman2:hover {
-    box-shadow: 3px 3px 3px 3px black;
+.buttonherman2::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+
+.buttonherman2:hover::after,
+button:focus::after {
+    animation: sheen 1s forwards;
+}
+
+@keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(1em, -9em);
+    }
 }
 
 .buttonherman2 p {
@@ -221,22 +316,88 @@ body {
 /*bouton herman 3*/
 
 .buttonherman3 {
-    width: 100px;
-    height: 50px;
+    width: 80px;
+    height: 40px;
     border-radius: 100%;
-    background-color: plum;
+    background-color: lightpink;
     box-shadow: 4px 4px 4px 4px grey;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.buttonherman3:hover {
-    box-shadow: 3px 3px 3px 3px black;
+.buttonherman3::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+
+.buttonherman3:hover::after,
+button:focus::after {
+    animation: sheen 1s forwards;
+}
+
+@keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(1em, -9em);
+    }
 }
 
 .buttonherman3 p {
+    color: white;
+    font-size: 20px;
+    z-index: 100;
+    font-family: 'WhiteRabbit';
+}
+
+
+/* Bouton herman 4 */
+
+.buttonherman4 {
+    width: 100px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: lightseagreen;
+    box-shadow: 4px 4px 4px 4px grey;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.buttonherman4::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+
+.buttonherman4:hover::after,
+button:focus::after {
+    animation: sheen 1s forwards;
+}
+
+@keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(1em, -9em);
+    }
+}
+
+.buttonherman4 p {
     color: white;
     font-size: 20px;
     z-index: 100;
@@ -249,7 +410,7 @@ body {
 .buttonroger {
     width: 50%;
     height: 70px;
-    background-color: lightgreen;
+    background-color: lightseagreen;
     border: 2px solid black;
     display: flex;
     flex-direction: row;
@@ -259,19 +420,39 @@ body {
 /*bouton roger 1*/
 
 .buttonroger1 {
-    width: 100px;
-    height: 50px;
+    width: 80px;
+    height: 40px;
     border-radius: 100%;
-    background-color: red;
+    background-color: black;
     box-shadow: 4px 4px 4px 4px grey;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.buttonroger1:hover {
-    box-shadow: 3px 3px 3px 3px black;
+.buttonroger1::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+
+.buttonroger1:hover::after,
+button:focus::after {
+    animation: sheen 1s forwards;
+}
+
+@keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(1em, -9em);
+    }
 }
 
 .buttonroger1 p {
@@ -285,19 +466,39 @@ body {
 /* bouton roger 2 */
 
 .buttonroger2 {
-    width: 100px;
-    height: 50px;
+    width: 80px;
+    height: 40px;
     border-radius: 100%;
-    background-color: green;
+    background-color: lightskyblue;
     box-shadow: 4px 4px 4px 4px grey;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.buttonroger2:hover {
-    box-shadow: 3px 3px 3px 3px black;
+.buttonroger2::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+
+.buttonroger2:hover::after,
+button:focus::after {
+    animation: sheen 1s forwards;
+}
+
+@keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(1em, -9em);
+    }
 }
 
 .buttonroger2 p {
@@ -311,19 +512,39 @@ body {
 /*bouton roger 3*/
 
 .buttonroger3 {
-    width: 100px;
-    height: 50px;
+    width: 80px;
+    height: 40px;
     border-radius: 100%;
-    background-color: plum;
+    background-color: lightcoral;
     box-shadow: 4px 4px 4px 4px grey;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.buttonroger3:hover {
-    box-shadow: 3px 3px 3px 3px black;
+.buttonroger3::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+
+.buttonroger3:hover::after,
+button:focus::after {
+    animation: sheen 1s forwards;
+}
+
+@keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(1em, -9em);
+    }
 }
 
 .buttonroger3 p {
