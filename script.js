@@ -47,11 +47,57 @@ function rogerlives() {
 }
 
 function recharge(character) {
-    character.energy = character.energy + 5;
     displayEnergyHerman();
     displayEnergyRoger();
+    jauge1.value = 30;
+    jauge2.value = 30;
+    roger.energy = 30;
+    herman.energy = 30;
 
 }
+
+
+function hermanMove() {
+    let herman = document.querySelector('.herman');
+    let hermanclass = herman.className;
+    herman.classList.add('hermanmove');
+    herman.addEventListener('animationend', function() {
+        herman.className = hermanclass;
+    })
+}
+
+function rogerMove() {
+    let roger = document.querySelector('.roger');
+    let rogerclass = roger.className;
+    roger.classList.add('rogermove');
+    roger.addEventListener('animationend', function() {
+        roger.className = rogerclass;
+    })
+}
+
+function animattackherman() {
+    let attack = document.querySelector('.explosionherm');
+    attack.style.display = 'block';
+    setTimeout(function() {
+        attack.style.display = "none";
+    }, 2000);
+
+}
+
+function animattackroger() {
+    let attack = document.querySelector('.explosionro');
+    attack.style.display = 'block';
+    setTimeout(function() {
+        attack.style.display = "none";
+    }, 2000);
+}
+
+function jauge(elem, val) {
+    elem.value = elem.value - val;
+
+}
+
+
 //affichage 
 // TODO: à regrouper
 
@@ -84,6 +130,7 @@ function displayLivesRoger() {
     let livesroger = document.querySelector(".livesroger");
     livesroger.innerHTML = roger.lives;
 }
+
 
 
 //Next ROund 
@@ -135,6 +182,8 @@ function gameOver() {
 function cont() {
     roger.energy = 30;
     herman.energy = 30;
+    jauge1.value = 30;
+    jauge2.value = 30;
 
 }
 //restart
@@ -145,6 +194,8 @@ function restartgame() {
     herman.lives = 3;
     roger.score = 0;
     herman.score = 0;
+    jauge1.value = 30;
+    jauge2.value = 30;
 }
 
 
@@ -153,6 +204,7 @@ function restartgame() {
 let buttonherman1 = document.querySelector(".buttonherman1");
 buttonherman1.addEventListener("click", function() {
     hermanAttack();
+    animattackherman();
     displayEnergyRoger();
     displayEnergyHerman();
     nextRound();
@@ -163,12 +215,15 @@ buttonherman1.addEventListener("click", function() {
     displayScoreRoger();
     displayLivesHerman();
     displayLivesRoger();
+    jauge(jauge1, 1);
+    jauge(jauge2, 5);
 
 });
 
 let buttonroger1 = document.querySelector(".buttonroger1");
 buttonroger1.addEventListener("click", function() {
     rogerAttack();
+    animattackroger();
     displayEnergyHerman();
     displayEnergyRoger();
     nextRound();
@@ -179,12 +234,15 @@ buttonroger1.addEventListener("click", function() {
     displayScoreHerman();
     displayLivesHerman();
     displayLivesRoger();
+    jauge(jauge2, 1);
+    jauge(jauge1, 5);
 });
 
 let buttonherman2 = document.querySelector(".buttonherman2");
 buttonherman2.addEventListener("click", function() {
 
     push(herman);
+    hermanMove();
     displayEnergyRoger();
     nextRound();
     gameOver();
@@ -198,6 +256,7 @@ buttonherman2.addEventListener("click", function() {
 let buttonroger2 = document.querySelector(".buttonroger2");
 buttonroger2.addEventListener("click", function() {
     push(roger);
+    rogerMove();
     displayEnergyHerman();
     nextRound();
     gameOver();
@@ -209,6 +268,14 @@ buttonroger2.addEventListener("click", function() {
 
 let buttonherman4 = document.querySelector(".buttonherman4");
 buttonherman4.addEventListener("click", function() {
-    recharge(roger);
+
     recharge(herman);
 });
+
+let buttonroger4 = document.querySelector(".buttonroger4");
+buttonroger4.addEventListener("click", function() {
+    recharge(roger);
+});
+
+let jauge1 = document.querySelector('#advancement1');
+let jauge2 = document.querySelector('#advancement2');
