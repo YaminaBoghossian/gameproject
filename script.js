@@ -241,7 +241,7 @@ buttonroger1.addEventListener("click", function() {
 let buttonherman2 = document.querySelector(".buttonherman2");
 buttonherman2.addEventListener("click", function() {
 
-    push(herman);
+    push(roger);
     hermanMove();
     displayEnergyRoger();
     nextRound();
@@ -255,7 +255,7 @@ buttonherman2.addEventListener("click", function() {
 
 let buttonroger2 = document.querySelector(".buttonroger2");
 buttonroger2.addEventListener("click", function() {
-    push(roger);
+    push(herman);
     rogerMove();
     displayEnergyHerman();
     nextRound();

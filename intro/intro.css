@@ -5,7 +5,7 @@ body {
 }
 
 .intropic {
-    width: 900px;
+    width: 825%;
     height: 500px;
     margin-top: 70px;
     display: flex;
@@ -13,7 +13,7 @@ body {
 }
 
 .img {
-    width: 890px;
+    width: 785%;
     height: 490px;
 }
 
