@@ -31,6 +31,9 @@ body {
 }
 
 
+/* Commun */
+
+
 /*------------------ Section Herman------------------------  */
 
 .hermandiv {
@@ -52,6 +55,9 @@ body {
     position: relative;
 }
 
+
+/* Herman pushes Roger */
+
 .hermanmove {
     animation-name: pushherm;
     animation-duration: 2s;
@@ -62,10 +68,67 @@ body {
         left: 0px;
     }
     50% {
-        left: 300px;
+        left: 500px;
     }
     100% {
         left: 0px;
+    }
+}
+
+.rogerpushed {
+    animation-name: ropushed;
+    animation-duration: 2s;
+}
+
+@keyframes ropushed {
+    0% {
+        left: 0px;
+    }
+    25% {
+        left: 0px;
+    }
+    50% {
+        left: 70px;
+    }
+    75% {
+        left: 50px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+
+/*Herman Jumps !! */
+
+.hermanjumps {
+    animation-name: hermjumps;
+    animation-duration: 2s;
+}
+
+@keyframes hermjumps {
+    0% {
+        bottom: 0px;
+        left: 0px;
+    }
+    10% {
+        bottom: 300px;
+        left: 200px;
+    }
+    25% {
+        bottom: 300px;
+        left: 200px;
+    }
+    50% {
+        bottom: 300px;
+        left: 200px;
+    }
+    75% {
+        bottom: 0px;
+        left: 0px;
+    }
+    100% {
+        bottom: 0px;
     }
 }
 
@@ -74,10 +137,10 @@ body {
 
 .explosionherm {
     position: absolute;
-    top: 380px;
-    left: 800px;
+    top: 350px;
+    left: 650px;
     height: 300px;
-    width: 300px;
+    width: 500px;
     display: none;
     z-index: 3;
 }
@@ -90,27 +153,51 @@ body {
     height: 600px;
     width: 150px;
     opacity: 0.8;
-    background-color: rgba(144, 238, 144, 0.4);
+    background-color: rgba(244, 66, 215, 0.4);
     text-align: center;
 }
 
 .portraitherman {
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
     opacity: 1;
 }
 
 .hermanpoints h1 {
     font-family: 'WhiteRabbit';
-    font-size: 2.5em;
+    font-size: 2em;
     color: rgba(0, 0, 0, 1);
+    text-shadow: white 1px 1px;
 }
 
-.hermanpoints p {
+.ptitle {
+    color: black;
     font-family: 'WhiteRabbit';
-    font-size: 1.5em;
-    color: rgba(0, 0, 0, 1);
-    margin-bottom: 15px;
+    font-size: 1.3em;
+    margin-top: 30px;
+    border: 2px solid black;
+    background-color: yellow;
+}
+
+.energyherman {
+    color: white;
+    font-family: 'WhiteRabbit';
+    font-size: 1.6em;
+    text-shadow: #000000 1px 1px;
+}
+
+.livesherman {
+    color: white;
+    font-family: 'WhiteRabbit';
+    font-size: 1.6em;
+    text-shadow: #000000 1px 1px;
+}
+
+.scoreherman {
+    color: white;
+    font-family: 'WhiteRabbit';
+    font-size: 1.6em;
+    text-shadow: #000000 1px 1px;
 }
 
 #advancement1 {
@@ -161,6 +248,9 @@ body {
     position: relative;
 }
 
+
+/* Roger pushes Herman */
+
 .rogermove {
     animation-name: pushro;
     animation-duration: 2s;
@@ -171,10 +261,64 @@ body {
         right: 0px;
     }
     50% {
-        right: 300px;
+        right: 450px;
     }
     100% {
         right: 0px;
+    }
+}
+
+.hermanpushed {
+    animation-name: hermpushed;
+    animation-duration: 2s;
+}
+
+@keyframes hermpushed {
+    0% {
+        right: 0px;
+    }
+    25% {
+        right: 0px;
+    }
+    50% {
+        right: 90px;
+    }
+    75% {
+        right: 50px;
+    }
+    100% {
+        right: 0px;
+    }
+}
+
+.rogerjumps {
+    animation-name: 'rojumps';
+    animation-duration: 2s;
+}
+
+@keyframes rojumps {
+    0% {
+        bottom: 0px;
+        right: 0px;
+    }
+    10% {
+        bottom: 300px;
+        right: 200px;
+    }
+    25% {
+        bottom: 300px;
+        right: 200px;
+    }
+    50% {
+        bottom: 300px;
+        right: 200px;
+    }
+    75% {
+        bottom: 0px;
+        right: 0px;
+    }
+    100% {
+        bottom: 0px;
     }
 }
 
@@ -183,9 +327,10 @@ body {
 
 .explosionro {
     position: absolute;
-    top: 350px;
+    top: 320px;
     right: 800px;
     display: none;
+    width: 300px;
 }
 
 
@@ -200,20 +345,36 @@ body {
 }
 
 .portraitroger {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
 }
 
 .rogerpoints h1 {
     font-family: 'WhiteRabbit';
-    font-size: 2.5em;
+    font-size: 2em;
     color: rgba(0, 0, 0, 1);
+    text-shadow: white 1px 1px;
 }
 
-.rogerpoints p {
+.energyroger {
+    color: white;
     font-family: 'WhiteRabbit';
-    font-size: 1.5em;
-    color: rgba(0, 0, 0, 1);
+    font-size: 1.6em;
+    text-shadow: #000000 1px 1px;
+}
+
+.livesroger {
+    color: white;
+    font-family: 'WhiteRabbit';
+    font-size: 1.6em;
+    text-shadow: #000000 1px 1px;
+}
+
+.scoreroger {
+    color: white;
+    font-family: 'WhiteRabbit';
+    font-size: 1.6em;
+    text-shadow: #000000 1px 1px;
 }
 
 #advancement2 {
@@ -255,7 +416,7 @@ body {
 .buttonherman {
     width: 50%;
     height: 70px;
-    background-color: plum;
+    background-color: rgb(247, 160, 240);
     border: 2px solid black;
     display: flex;
     flex-direction: row;
@@ -314,7 +475,7 @@ button:focus::after {
     width: 80px;
     height: 40px;
     border-radius: 100%;
-    background-color: lightseagreen;
+    background-color: black;
     box-shadow: 4px 4px 4px 4px grey;
     margin: auto;
     display: flex;
@@ -360,7 +521,7 @@ button:focus::after {
     width: 80px;
     height: 40px;
     border-radius: 100%;
-    background-color: lightpink;
+    background-color: black;
     box-shadow: 4px 4px 4px 4px grey;
     margin: auto;
     display: flex;
@@ -404,8 +565,7 @@ button:focus::after {
 
 .buttonherman4 {
     width: 100px;
-    height: 50px;
-    border-radius: 100%;
+    height: 30px;
     background-color: lightseagreen;
     box-shadow: 4px 4px 4px 4px grey;
     margin: auto;
@@ -439,7 +599,7 @@ button:focus::after {
 }
 
 .buttonherman4 p {
-    color: white;
+    color: black;
     font-size: 20px;
     z-index: 100;
     font-family: 'WhiteRabbit';
@@ -451,7 +611,7 @@ button:focus::after {
 .buttonroger {
     width: 50%;
     height: 70px;
-    background-color: lightseagreen;
+    background-color: rgb(161, 247, 153);
     border: 2px solid black;
     display: flex;
     flex-direction: row;
@@ -510,7 +670,7 @@ button:focus::after {
     width: 80px;
     height: 40px;
     border-radius: 100%;
-    background-color: lightskyblue;
+    background-color: black;
     box-shadow: 4px 4px 4px 4px grey;
     margin: auto;
     display: flex;
@@ -556,7 +716,7 @@ button:focus::after {
     width: 80px;
     height: 40px;
     border-radius: 100%;
-    background-color: lightcoral;
+    background-color: black;
     box-shadow: 4px 4px 4px 4px grey;
     margin: auto;
     display: flex;
@@ -597,8 +757,7 @@ button:focus::after {
 
 .buttonroger4 {
     width: 100px;
-    height: 50px;
-    border-radius: 100%;
+    height: 30px;
     background-color: lightseagreen;
     box-shadow: 4px 4px 4px 4px grey;
     margin: auto;
@@ -632,7 +791,7 @@ button:focus::after {
 }
 
 .buttonroger4 p {
-    color: white;
+    color: black;
     font-size: 20px;
     z-index: 100;
     font-family: 'WhiteRabbit';
